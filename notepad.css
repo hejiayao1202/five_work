@@ -1,0 +1,154 @@
+ul li{
+    list-style: none;
+}
+ul{
+    margin:0px; 
+    padding:0px;
+}
+.menu{
+    width: 800px;
+    height: 30px;
+}
+.options{
+    float: left;
+    padding: 0 10px 0 10px;
+    position: relative;
+}
+.second_menu{
+    padding: 2px 0 2px 0;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100px;
+    background-color: rgb(240, 240, 240);
+    border: 0.5px solid rgb(204, 204, 204);
+    display: none;
+}
+.second_options{
+    width: 98px;
+    height: 20px;
+}
+/* 输入框 */
+.enter{
+    width: 100%;
+    height: 500px;
+}
+.text{
+    width: 100%;
+    height: 500px;
+}
+/* 对话框 */
+.notepad-dlg-font{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: 10;
+}
+.notepad-dlg-font .dialog-box{
+    border: 1px solid rgb(64, 201, 255);
+    box-shadow: 5px 5px 5px rgb(83, 83, 83);
+    box-sizing: border-box;
+    cursor: default;
+    height: 400px;
+    width: 350px;
+    margin: 0 auto;
+    top: 100px;
+    position: relative;
+    user-select: none;
+}
+.notepad-dlg-font .titlebar{
+    height: 30px;
+    background-color: white;
+    font-size: 15px;
+}
+.notepad-dlg-font .title{
+    left: 10px;
+    line-height: 30px;
+    position: absolute;
+    margin: 0;
+}
+.notepad-dlg-font .close-btn{
+    line-height: 30px;
+    position: absolute;
+    right: 10px;
+    color: rgb(88, 88, 88);
+}
+.notepad-dlg-font .main{
+    background-color: #f0f0f0;
+    height: 367px;
+    box-sizing: border-box;
+    padding: 12px;
+    position: relative;
+}
+.notepad-dlg-font .mainLi li{
+    font-size: 12px;
+}
+.notepad-dlg-font .font{
+    font-size: 13px;
+}
+.notepad-dlg-font .fontType{
+    width: 99px;
+}
+.notepad-dlg-font .fonttype{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    overflow-y:scroll;
+    border: 1px solid black;
+}
+.notepad-dlg-font .fontWeight{
+    width: 79px;
+}
+.notepad-dlg-font .fontweight{
+    width: 80px;
+    height: 100px;
+    background-color: white;
+    overflow-y:scroll;
+    border: 1px solid black;
+}
+.notepad-dlg-font .fontSize{
+    width: 49px;
+}
+.notepad-dlg-font .fontsize{
+    width: 50px;
+    height: 100px;
+    background-color: white;
+    overflow-y:scroll;
+    border: 1px solid black;
+}
+.example{
+    position: absolute;
+    left: 10px;
+    top:180px;
+    width: 120px;
+    height: 40px;
+}
+/* 对话框 脚本 */
+.scr{
+    position: absolute;
+    left: 10px;
+    top: 250px;
+}
+.scrtext{
+    font-size: 12px;
+}
+.srcsel{
+    width: 150px;
+}
+/* 对话框 按钮 */
+.btn-font{
+    width: 86px;
+    height: 28px;
+    position: absolute;
+    right: 108px;
+    bottom: 16px;
+}
+.btn-cancel{
+    width: 86px;
+    height: 28px;
+    position: absolute;
+    right: 14px;
+    bottom: 16px;
+}

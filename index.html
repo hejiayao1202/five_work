@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./notepad.css" />
+    <title>Document</title>
+</head>
+<body>
+    <ul class="menu">
+        <li class="options">
+            <span class="title">文件(F)</span>
+            <div class="second_menu">
+                <ul class="secmenu">
+                    <li class="second_options">新建</li>
+                    <li class="second_options">新窗口</li>
+                    <li class="second_options">打开</li>
+                    <li class="second_options">保存</li>
+                    <li class="second_options">另存为</li>
+                    <li class="second_options">页面设置</li>
+                    <li class="second_options">打印</li>
+                    <li class="second_options">退出</li>
+                </ul>
+            </div>
+        </li>
+        <li class="options">
+            <span class="title" href="#">编辑(E)</span>
+            <div class="second_menu">
+                <ul class="secmenu">
+                    <li class="second_options">撤销</li>
+                    <li class="second_options">剪切</li>
+                    <li class="second_options">复制</li>
+                    <li class="second_options">黏贴</li>
+                    <li class="second_options">删除</li>
+                    <li class="second_options">查找</li>
+                    <li class="second_options">替换</li>
+                </ul>
+            </div>
+        </li>
+        <li class="options">
+            <span class="title" href="#">格式(O)</span>
+            <div class="second_menu">
+                <ul class="secmenu">
+                    <li class="second_options">自动换行</li>
+                    <li id="font" class="second_options">字体</li>
+                </ul>
+            </div>
+        </li>
+        <li class="options">
+            <span class="title" href="#">查看(V)</span>
+            <div class="second_menu">
+                <ul class="secmenu">
+                    <li class="second_options">缩放</li>
+                    <li class="second_options">状态栏</li>
+                </ul>
+            </div>
+        </li>
+        <li class="options">
+            <span class="title" href="#">帮助(H)</span>
+            <div class="second_menu">
+                <ul class="secmenu">
+                    <li class="second_options">查看帮助</li>
+                    <li class="second_options">关于记事本</li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+    <!-- 输入框 -->
+    <div class="enter">
+        <textarea class="text" name="txt" autofocus></textarea>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="./notepad.js" ></script>
+<script>
+    $(function(){
+        // 鼠标浮上格式
+        $(".menu .options").on("mouseover",function(){
+            $(this).css("background-color","rgb(181, 233, 253)");
+            var $secondMenu=$(this).children(".second_menu");
+            $secondMenu.css("display","block")
+        })
+        $(".menu .options").on("mouseout",function(){
+            $(this).css("background-color","white");
+            var $secondMenu=$(this).children(".second_menu");
+            $secondMenu.css("display","none")
+        })
+        $(".secmenu .second_options").on("mouseover",function(){
+            $(this).css("background-color","rgb(181, 233, 253)");
+        })
+        $(".secmenu .second_options").on("mouseout",function(){
+            $(this).css("background-color","rgb(240, 240, 240)");
+        })
+        // 弹出对话框
+        var $btnDlg=$('#font');
+        $btnDlg.click(function(){
+            $dlgGoto.show($('.text'));
+        })
+        // $dlgGoto.show($('.text'));
+    })
+</script>
+</html>
